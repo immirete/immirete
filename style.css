@@ -1167,7 +1167,7 @@ body.light .signatures {
 .experience-item {
   display: flex;         /* Activa Flexbox */
   align-items: flex-start; /* Alinea el logo y el texto arriba */
-  gap: 1.5rem;           /* Espacio entre el logo y el bloque de texto */
+  gap: 2.5rem;           /* Espacio entre el logo y el bloque de texto */
   border: 1px solid var(--border);
   padding: var(--gutter-medium); /* Ajusta el padding si es necesario */
   border-radius: var(--gutter-nano);
@@ -1177,8 +1177,8 @@ body.light .signatures {
 /* Estilo para el logo de la empresa */
 .experience-logo {
   flex-shrink: 0;        /* Evita que el logo se encoja */
-  width: 60px;           /* Ancho del logo (ajusta según necesites) */
-  height: 60px;          /* Alto del logo (ajusta según necesites) */
+  width: 120px;           /* Ancho del logo (ajusta según necesites) */
+  height: 120px;          /* Alto del logo (ajusta según necesites) */
   object-fit: contain;   /* Mantiene la proporción del logo dentro del espacio */
   border-radius: 6px;    /* Bordes ligeramente redondeados (opcional) */
   /* background-color: var(--bg-color-primary); */ /* Fondo opcional si los logos son transparentes */
