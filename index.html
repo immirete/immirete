@@ -63,6 +63,8 @@
 
   <header class="header">
 
+    <div class="menu-btn-theme-container">
+    </div>
     <div class="menu-btn-container">
       <div class="container">
         <button type="button" class="menu-btn">menu</button>
@@ -70,14 +72,18 @@
     </div>
 
     <nav class="nav hidden">
+      
       <ol class="nav-items">
         <li class="nav-item"><a href="#">Home</a></li>
         <li class="nav-item"><a href="#work">My Work</a></li>
         <li class="nav-item"><a href="#blog">See Education</a></li>
         <li class="nav-item"><a href="#skills">My Skills</a></li>
-        <li class="nav-item">
-          <a href="#contact" data-focused="last-focused">Contact</a>
+        <li class="nav-item"><a href="#contact" data-focused="last-focused">Contact</a>
         </li>
+        <label class="theme-switch" for="theme-switch">
+          <span>Dark Theme</span>
+          <input type="checkbox" id="theme-switch" role="switch" />
+        </label>
       </ol>
     </nav>
 
@@ -154,7 +160,7 @@
                 <li>Quasar</li>
                 <li>Typescript</li>
                 <li>SCSS</li>
-                <li>MDX</li>
+                <li>Docker</li>
               </ol>
 
               <div class="work-links">
@@ -172,7 +178,7 @@
             <!-- Update img src and alt attribute  -->
 
             <picture class="work-img">
-              <img loading="lazy" src="assets/images/work/portfolio-template.webp" alt="agency elevation" />
+              <img loading="lazy" src="assets/images/quasar.png" alt="agency elevation" />
             </picture>
           </div>
           <div class="work-box">
@@ -191,7 +197,7 @@
               </ol>
               <div class="work-links">
                 <!-- Add url of project in href attribute -->
-                <a href="#" target="_blank" rel="noopener" class="link">Explore this project</a>
+                <a href="https://github.com/ivancatalana/BlackPhotoTatooProjecte" target="_blank" rel="noopener" class="link">Explore this project</a>
 
                 <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
                 <a href="https://github.com/ivancatalana/BlackPhotoTatooProjecte" target="_blank" rel="noopener"
@@ -210,11 +216,10 @@
           <div class="work-box">
             <div class="work-textbox">
               <!-- Add your project title here -->
-              <h3 class="h3">contribute.dev</h3>
+              <h3 class="h3">animation_project</h3>
               <!-- Add small description of your project  -->
               <p class="work-text">
-                Website for DevX A dedicated space for developer experience
-              </p>
+                An expressive virtual assistant with natural language processing and dynamic facial animations              </p>
               <ol class="work-technologies">
                 <li>Ruby</li>
                 <li>SvelteKit</li>
@@ -222,17 +227,17 @@
               </ol>
               <div class="work-links">
                 <!-- Add url of project in href attribute -->
-                <a href="#" target="_blank" rel="noopener" class="link">Explore this project</a>
+                <a href="https://github.com/immirete/animation_project" target="_blank" rel="noopener" class="link">Explore this project</a>
 
                 <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
-                <a href="#" target="_blank" rel="noopener" title="Source code">
+                <a href="https://github.com/immirete/animation_project" target="_blank" rel="noopener" title="Source code">
                   <img src="assets/images/social-links/github.svg" alt="GitHub" loading="lazy" />
                 </a>
               </div>
             </div>
             <!-- Update img src and alt attribute  -->
             <picture class="work-img">
-              <img loading="lazy" src="assets/images/work/contribute-dev.webp" alt="contribute dev" />
+              <img loading="lazy" src="assets/images/animation_project.gif" alt="contribute dev" />
             </picture>
           </div>
         </div>
@@ -441,23 +446,40 @@
                           games with pyGame and Java FX library.
                         </p>
                         <!-- Replace src with your signatures and name -->
-                        <img src="assets/images/signatures.png" alt="Syed Mohsin" class="signatures" loading="lazy" />
+                        <img src="assets/images/signature2.png" alt="Syed Mohsin" class="signatures" loading="lazy" />
                       </div>
-                      <form action="#" class="contact-form" netlify>
-                        <div class="form-field">
-                          <label for="name">Name</label>
-                          <input type="text" name="name" id="name" required />
-                        </div>
-                        <div class="form-field">
-                          <label for="email">Email</label>
-                          <input type="email" name="email" id="email" required inputmode="email" />
-                        </div>
-                        <div class="form-field">
-                          <label for="message">How can I help you?</label>
-                          <textarea name="message" id="message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-cta">Send</button>
-                      </form>
+                      <form
+                      action="https://formspree.io/f/xyzevywk"
+                      method="POST"                         
+                      class="contact-form"                   
+                  >
+                    <div class="form-field">                
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" required /> 
+                    </div>
+            
+                    <div class="form-field">
+                      <label for="email">Email</label>
+                      <input
+                          type="email"
+                          name="_replyto"              
+                          id="email"
+                          required
+                          inputmode="email"
+                      />
+                    </div>
+            
+                    <div class="form-field">
+                      <label for="message">How can I help you?</label>
+                      <textarea name="message" id="message" required></textarea> 
+                    </div>
+            
+                    <input type="hidden" name="_subject" value="New Contact from Portfolio!" />
+            
+                    <input type="text" name="_gotcha" style="display:none" />
+            
+                    <button type="submit" class="btn btn-cta">Send</button>
+                  </form>
                     </div>
                   </div>
                 </section>
@@ -478,18 +500,18 @@
                   src="assets/images/social-links/codepen.svg" alt="Codepen" /></a>
             </li>
             <li class="footer-link">
-              <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank"
+              <a title="Linkedin" href="https://www.linkedin.com/in/ivan-morales-mirete-927264280/" target="_blank"
                 rel="noopener"><img loading="lazy" src="assets/images/social-links/linkedin.svg" alt="Linkedin" /></a>
             </li>
             <li class="footer-link">
-              <a title="Twitter" href="https://github.com/immirete" target="_blank" rel="noopener"><img loading="lazy"
+              <a title="Twitter" href="https://x.com/suobiDev" target="_blank" rel="noopener"><img loading="lazy"
                   src="assets/images/social-links/twitter.svg" alt="Twitter" /></a>
             </li>
           </ol>
         </nav>
         <p class="footer-text">
-          &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener"
-            href="https://github.com/immirete">Syed Mohsin.</a>
+          &copy; <span>2024</span> - PortFolio developed by <a target="_blank" rel="noopener"
+            href="https://github.com/immirete">Ivan Morales.</a>
         </p>
         <label class="theme-switch" for="theme-switch">
           <span>Dark Theme</span>
