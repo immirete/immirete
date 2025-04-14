@@ -1083,7 +1083,11 @@ body.dark .work-links img {
   inline-size: 150px;
 }
 
-
+.btn-cv-download {
+  display: inline-block; /* O 'block' si lo quieres en su propia línea */
+  margin-top: 1.5rem; /* Espacio sobre el botón */
+  /* Heredará estilos de .btn y .btn-secondary, añade más si es necesario */
+}
 body.light .signatures {
   filter: invert(1);
 }
@@ -1145,7 +1149,113 @@ body.light .signatures {
 .contact-form button[type="submit"] {
   border: none;
 }
+/* ============================================= */
+/* == Professional Experience Section (Layout con Logo) == */
+/* ============================================= */
 
+.experience {
+  padding: 4rem 0;
+}
+
+.experience-items {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2.5rem; /* Aumentar un poco el espacio entre items */
+}
+
+/* Estilo para cada "tarjeta" de experiencia - Ahora es un contenedor Flex */
+.experience-item {
+  display: flex;         /* Activa Flexbox */
+  align-items: flex-start; /* Alinea el logo y el texto arriba */
+  gap: 1.5rem;           /* Espacio entre el logo y el bloque de texto */
+  border: 1px solid var(--border);
+  padding: var(--gutter-medium); /* Ajusta el padding si es necesario */
+  border-radius: var(--gutter-nano);
+  background-color: var(--bg-color-secondary);
+}
+
+/* Estilo para el logo de la empresa */
+.experience-logo {
+  flex-shrink: 0;        /* Evita que el logo se encoja */
+  width: 60px;           /* Ancho del logo (ajusta según necesites) */
+  height: 60px;          /* Alto del logo (ajusta según necesites) */
+  object-fit: contain;   /* Mantiene la proporción del logo dentro del espacio */
+  border-radius: 6px;    /* Bordes ligeramente redondeados (opcional) */
+  /* background-color: var(--bg-color-primary); */ /* Fondo opcional si los logos son transparentes */
+  /* padding: 5px; */                         /* Padding opcional si usas fondo */
+}
+
+/* Contenedor para todo el texto (título, detalles, resumen) */
+.experience-text-content {
+  flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+}
+
+/* Estilos para el texto (título H4, detalles, resumen) - sin cambios respecto a la versión anterior */
+.experience-item .h4 {
+  margin-bottom: 0.6rem;
+  color: var(--important);
+}
+
+.experience-details {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.experience-details strong {
+  color: var(--sub);
+  font-weight: 600;
+}
+
+.experience-summary {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience-summary li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--body);
+  line-height: 1.6;
+}
+
+.experience-summary li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--important); /* O var(--accent-color) */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.experience-summary li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 600px) { /* Punto de ruptura donde cambiar a layout vertical */
+  .experience-item {
+    flex-direction: column; /* Apila logo y texto */
+    align-items: flex-start; /* Alinea todo a la izquierda */
+    gap: 1rem; /* Espacio reducido entre logo y texto */
+  }
+
+  .experience-logo {
+    /* Puedes ajustar el tamaño del logo en móviles si quieres */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem; /* Espacio debajo del logo cuando está arriba */
+  }
+}
+
+/* ============================================= */
+/* ==       Fin Estilos Experiencia          == */
+/* ============================================= */
 /* --------------------------------- */
 /* ----- Footer -----*/
 /* --------------------------------- */
