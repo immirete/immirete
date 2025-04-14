@@ -1072,15 +1072,31 @@ body.dark .work-links img {
 .contact-text {
   margin-block-end: var(--gutter-small);
 }
+.profile-image-large {
+  display: block; /* Opcional: asegura que se comporte como un bloque */
+  width: 100px;  /* Cambia este valor al tamaño deseado (ej. 100px, 200px, etc.) */
+  height: auto;  /* Mantiene la proporción de la imagen */
+  border-radius: 50%;
+}
 
 .signatures {
   inline-size: 150px;
 }
 
+
 body.light .signatures {
   filter: invert(1);
 }
-
+/* Contenedor para la firma y la imagen de perfil */
+.signature-profile-container {
+  display: flex;         /* Activa Flexbox */
+  align-items: center;   /* Alinea verticalmente los elementos al centro */
+  /* Alternativa: si quieres menos espacio, usa 'justify-content: flex-start;' y añade margen a la imagen */
+  /* justify-content: flex-start; */
+  margin-top: 20px;      /* Espacio arriba del contenedor */
+  flex-wrap: wrap;       /* Permite que los elementos pasen abajo en pantallas pequeñas si no caben */
+  gap: 20px;             /* Espacio entre firma e imagen si usan flex-start o si pasan abajo */
+}
 .contact-form {
   background-color: var(--bg-color-secondary);
   border-top-right-radius: var(--gutter-nano);
